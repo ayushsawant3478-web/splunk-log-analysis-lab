@@ -1,2 +1,2 @@
-# splunk-log-analysis-lab
+# Splunk-log-analysis-lab
 SOC-style log analysis investigation using Splunk SPL on web server access logs
