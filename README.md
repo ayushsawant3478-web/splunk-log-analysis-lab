@@ -32,7 +32,7 @@ host="Ayush" source="tutorialdata.zip:*www1*access.log" | stats count by status
 | 503 | 648 |
 | 505 | 484 |
 
-![Status code breakdown](screenshots/01_status_code_breakdown.png)
+![Status code breakdown](Screenshots/01_status_code_breakdown.png)
 
 **Observation:** The vast majority of traffic (23,670 events) returns successful `200` responses. `404` errors account for 488 events out of 27,256 total — roughly 1.8% of traffic. This is the segment worth investigating further, since 404s can indicate either broken links (benign) or reconnaissance activity (malicious).
 
@@ -57,7 +57,7 @@ Sorted descending by count.
 | 74.53.23.135 | 10 |
 | (remaining ~120 IPs) | 2–8 each |
 
-![404 counts by client IP, sorted](screenshots/02_404_by_clientip_sorted.png)
+![404 counts by client IP, sorted](Screenshots/02_404_by_clientip_sorted.png)
 
 **Observation:** 488 total 404s are spread across 124 unique IPs. Most IPs sit in the 2–10 range, consistent with normal scattered browsing noise. One IP, `87.194.216.51`, stands out with 24 hits — roughly 2.4x the next-highest count.
 
@@ -85,7 +85,7 @@ host="Ayush" source="tutorialdata.zip:*www1*access.log" status=404 clientip="87.
 /passwords.pdf?JSESSIONID=...
 ```
 
-![Suspicious IP URI detail](screenshots/03_suspicious_ip_uri_detail.png)
+![Suspicious IP URI detail](Screenshots/03_suspicious_ip_uri_detail.png)
 
 **Observation:** Requests are a mix of two categories:
 
